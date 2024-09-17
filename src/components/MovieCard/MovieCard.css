@@ -1,0 +1,105 @@
+.movie-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  height: 500px;
+  margin-bottom: 20px;
+  margin-top: 2vw;
+  padding: 2%;
+}
+
+.movie-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px); /* Aplica el desenfoque solo al fondo */
+  z-index: 0; /* Asegura que el fondo esté detrás de otros elementos */
+}
+
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.movie-poster-center {
+  position: absolute;
+  width: 15vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  color: white;
+  text-align: left;
+  z-index: 3; /* Asegura que la información esté visible por encima de otros elementos */
+
+  
+}
+
+.card-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-date {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.card-overview {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: scroll;
+
+}
+/* Estilos para la versión móvil */
+@media (max-width: 768px) {
+  .movie-card {
+    height: auto; 
+    background: none; 
+  }
+
+  .movie-poster-center {
+    position: relative;
+    width: 100%; 
+    top: 0;
+    left: 0;
+    transform: none; 
+    border-radius: 0; 
+    box-shadow: none; 
+  }
+
+  .movie-info {
+    position: relative; 
+    padding: 10px; 
+    margin-top: -50px; 
+  }
+
+  /* Oculta la descripción en la versión móvil */
+
+}

@@ -1,0 +1,41 @@
+.saved-page {
+  margin-top: 10vw;
+  padding: 20px;
+  text-align: center;
+  margin: 10vw 10%;
+}
+.saved-page > h1{
+ color: white;
+}
+.saved-movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.no-saved-movies {
+  color: #888;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px){
+  .saved-movies-grid {
+    justify-items: center;
+  }
+  .saved-page {
+    margin-top: 15vw;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .saved-page {
+    margin-top: 15vw;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .saved-page {
+    margin-top: 25vw;
+  }
+}
